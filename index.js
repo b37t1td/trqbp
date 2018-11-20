@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-20 19:54]
+* Last Modified : [2018-11-20 20:23]
 * Description   :  
 **********************************************************************************/
 
@@ -16,7 +16,9 @@ const fs = require('fs');
   let tagged = new Tagged({ proxy, cookie });
 
   try {
-    console.log(await tagged.petInfo('5458689216'));
+//    console.log(await tagged.petInfo('5458689216'));
+//    console.log((await tagged.getPets2()));
+    console.log(await tagged.myId());
   } catch(e) {
     console.log(e);
   }
