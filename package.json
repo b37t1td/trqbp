@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/b37t1td/trqbp/issues"
   },
-  "homepage": "https://github.com/b37t1td/trqbp#readme"
+  "homepage": "https://github.com/b37t1td/trqbp#readme",
+  "dependencies": {
+    "cherio": "^1.0.0-rc.2",
+    "request-promise": "^4.2.2",
+    "socks-proxy-agent": "^4.0.1"
+  }
 }
