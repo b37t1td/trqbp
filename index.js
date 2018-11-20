@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-20 23:30]
+* Last Modified : [2018-11-20 23:42]
 * Description   :  
 **********************************************************************************/
 
@@ -10,38 +10,17 @@ require('dotenv').config();
 const EMAILS = process.env.EMAILS.split(',');
 const PROXIES = process.env.PROXIES.split(',');
 
-const assert = require('assert');
-
-const Storage = require('node-storage');
-const db = new Storage(process.env.DB || __dirname + './data/db');
-db.put('checkStore', true);
-assert(db.get('checkStore'), 'Storage does not work');
-
-const Tagged = require('./lib/tagged');
-const login = require('./lib/login');
-
-async function startSession(email, proxy) {
-}
+const { startInstance } = require('./lib/poll');
 
 (async function() {
+  let bots = [];
 
   try {
     for (let idx in EMAILS) {
-      let email = EMAILS[idx];
-      let proxy = PROXIES[idx];
-      let cookie = db.get(`${email}.cookie`) || await login({ email, password: process.env.ALLPASS, proxy });
-      db.put(`${email}.cookie`, cookie);
-
-      let tagged = new Tagged({ proxy, cookie });
-      let id = await tagged.myId();
-
-      if (!id) {
-        cookie = await login({ email, password: process.env.ALLPASS, proxy });
-        db.put(`${email}.cookie`, cookie);
-      } else if (process.env.DEBUG) {
-        console.log('Logged in', email, 'via', proxy, 'id', id);
-      }
+      bots.push(startInstance(EMAILS[idx], PROXIES[idx]));
     }
+
+    await Promise.all(bots);
   } catch(e) {
     console.log(e);
   }
