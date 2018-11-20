@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-20 22:56]
+* Last Modified : [2018-11-20 23:30]
 * Description   :  
 **********************************************************************************/
 
@@ -25,22 +25,25 @@ async function startSession(email, proxy) {
 
 (async function() {
 
-  for (let idx in EMAILS) {
-    let email = EMAILS[idx];
-    let proxy = PROXIES[idx];
-    let cookie = db.get(`${email}.cookie`) || await login({ email, password: process.env.ALLPASS, proxy });
-    let tagged = new Tagged({ proxy, cookie });
-    let id = await tagged.myId();
+  try {
+    for (let idx in EMAILS) {
+      let email = EMAILS[idx];
+      let proxy = PROXIES[idx];
+      let cookie = db.get(`${email}.cookie`) || await login({ email, password: process.env.ALLPASS, proxy });
+      db.put(`${email}.cookie`, cookie);
 
-    if (id) {
-      if (process.env.DEBUG) {
-        console.log('Successfully logged in by ', id);
-       }
-    } else {
-      cookie = await login({ email, password: process.env.ALLPASS, proxy });
+      let tagged = new Tagged({ proxy, cookie });
+      let id = await tagged.myId();
+
+      if (!id) {
+        cookie = await login({ email, password: process.env.ALLPASS, proxy });
+        db.put(`${email}.cookie`, cookie);
+      } else if (process.env.DEBUG) {
+        console.log('Logged in', email, 'via', proxy, 'id', id);
+      }
     }
-
-    db.put(`${email}.cookie`, cookie);
+  } catch(e) {
+    console.log(e);
   }
 
 //  let tagged = new Tagged({ proxy, cookie });
