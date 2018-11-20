@@ -1,0 +1,19 @@
+{
+  "name": "trqbp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b37t1td/trqbp.git"
+  },
+  "author": "Svetlana Linuxenko <linuxenko@yahoo.com> (http://www.linuxenko.pro)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b37t1td/trqbp/issues"
+  },
+  "homepage": "https://github.com/b37t1td/trqbp#readme"
+}
