@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 12:55]
+* Last Modified : [2018-11-21 13:19]
 * Description   :  
 **********************************************************************************/
 
@@ -41,7 +41,12 @@ function sleep(millis) {
   let bots = [];
   const remote = new Remote('wss://app-plqkqftgch.now.sh', function(data) {
     if (data.type === 'pongs') {
-      bots = data.pongs;
+      bots = data.pongs.map(function(p) {
+        p.n = p.stats.petRuns.length;
+        return p;
+      }).sort(function(a,b) {
+        return a.n - b.n;
+      });
     }
   });
 
@@ -61,10 +66,10 @@ function sleep(millis) {
           let id = validate(e);
           if (id) {
             let uuid = id + '-' + w;
-            if (!db.get(uuid)) {
+            if (!db.get(uuid) && bots[0]) {
+              let b = bots[0];
               db.put(uuid, true);
               console.log('send', uuid);
-              let b = bots[Math.floor(Math.random() * bots.length)];
               remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
             }
           }
