@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 16:10]
+* Last Modified : [2018-11-21 16:19]
 * Description   :  
 **********************************************************************************/
 
@@ -90,16 +90,19 @@ function sleep(millis) {
       for (let w of wishes) {
         let e = (await bot.news({ id: w, num_events: 1})).results.events_html[0];
 
-        if (e) {
+        if (e && e.pet_id && cache.indexOf(e.pet_id) === -1) {
+          cache.push(e.pet_id);
+
           let id = await validate(e, bot);
-          if (id && cache.indexOf(id) === -1) {
-            cache.push(id);
+          if (id) {
             let uuid = id + '-' + w;
             if (bots[0]) {
               let b = bots[0];
               console.log('send', uuid);
               remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
             }
+          } else {
+            remote.send({ type: 'remove', id: Number(e.pet_id) });
           }
         }
       }
