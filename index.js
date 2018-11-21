@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 18:49]
+* Last Modified : [2018-11-21 18:50]
 * Description   :  
 **********************************************************************************/
 
@@ -23,7 +23,7 @@ function wids(data) {
   });
 }
 
-const MTIME = (3600 * 5) * 1000;
+const MTIME = (3600 * (Number(process.env.MTIME) || 5)) * 1000;
 
 async function validate(e, bot) {
   try {
