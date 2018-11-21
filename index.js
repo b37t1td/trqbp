@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 02:29]
+* Last Modified : [2018-11-21 02:38]
 * Description   :  
 **********************************************************************************/
 
@@ -22,7 +22,9 @@ const Remote = require('./lib/remote');
 
   const remote = new Remote('wss://app-plqkqftgch.now.sh', function(data) {
     function remoteSync(bot) {
-      remote.send({ type: 'force-pong', id: bot.id, stats: bot.petRuns(), state: true });
+      process.nextTick(() => {
+        remote.send({ type: 'force-pong', id: bot.id, stats: bot.petRuns(), state: true });
+      });
     }
 
     if (data.type === 'share') {
@@ -42,9 +44,11 @@ const Remote = require('./lib/remote');
     }
 
     if (data.type === 'ping') {
-      for (let bot of bots) {
-        remote.send({ type: 'pong', id: bot.id, stats: bot.petRuns() });
-       }
+      process.nextTick(() => {
+        for (let bot of bots) {
+          remote.send({ type: 'pong', id: bot.id, stats: bot.petRuns() });
+         }
+      });
       return;
     }
 
