@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-20 23:42]
+* Last Modified : [2018-11-21 02:29]
 * Description   :  
 **********************************************************************************/
 
@@ -11,45 +11,82 @@ const EMAILS = process.env.EMAILS.split(',');
 const PROXIES = process.env.PROXIES.split(',');
 
 const { startInstance } = require('./lib/poll');
+const Remote = require('./lib/remote');
 
 (async function() {
   let bots = [];
 
-  try {
-    for (let idx in EMAILS) {
-      bots.push(startInstance(EMAILS[idx], PROXIES[idx]));
+  function findBot(id) {
+    return bots.filter((b) => b.id === id)[0];
+  }
+
+  const remote = new Remote('wss://app-plqkqftgch.now.sh', function(data) {
+    function remoteSync(bot) {
+      remote.send({ type: 'force-pong', id: bot.id, stats: bot.petRuns(), state: true });
     }
 
-    await Promise.all(bots);
+    if (data.type === 'share') {
+      for (let bot of bots) {
+        bot.run(String(data.id), data.price);
+        remoteSync(bot);
+       }
+      return;
+    }
+
+    if (data.type === 'remove') {
+      for (let bot of bots) {
+        bot.remove(String(data.id));
+        remoteSync(bot);
+       }
+      return;
+    }
+
+    if (data.type === 'ping') {
+      for (let bot of bots) {
+        remote.send({ type: 'pong', id: bot.id, stats: bot.petRuns() });
+       }
+      return;
+    }
+
+    if (data.type === 'buy-remote') {
+      let bot = findBot(data.client);
+      if (bot) {
+        bot.petInfo(data.pet).then(function(pet) {
+          bot.buy(pet);
+        });
+        remoteSync(bot);
+      }
+      return;
+    }
+
+    if (data.type === 'run-remote') {
+      let bot = findBot(data.client);
+      if (bot) {
+        bot.run(String(data.id), data.price);
+        remoteSync(bot);
+      }
+      return;
+    }
+
+    if (data.type === 'remove-remote') {
+      let bot = findBot(data.client);
+      if (bot) {
+        bot.remove(String(data.pet));
+        remoteSync(bot);
+      }
+      return;
+    }
+  });
+
+  try {
+    for (let idx in EMAILS) {
+      bot = await startInstance(EMAILS[idx], PROXIES[idx]);
+      bot.id = await bot.myId();
+      bots.push(bot);
+    }
   } catch(e) {
     console.log(e);
   }
 
-//  let tagged = new Tagged({ proxy, cookie });
- 
-
-//  try {
-//    console.log(await login({
-//      email: 'julia.r12@gmail.su',
-//      password: 'lnYZbc6B4taWj9Cd',
-//      proxy
-//    }));
-//    console.log(await tagged.petInfo('5458689216'));
-//    console.log((await tagged.getPets2()));
-//   let petId = '6066301549';
-//   let pet = (await tagged.petInfo(petId)).results.pet; 
-//   console.log(await tagged.buy(pet));
-//  } catch(e) {
-//    console.log(e);
-//  }
-//  console.log(await tagged.wishList());
-//  console.log(await tagged.pip());
-  //
-//  fs.writeFileSync('/tmp/rr.json', await tagged.wishList());
-//  let json = fs.readFileSync('/tmp/rr.json', 'utf-8');
-
-//  json = json.replace(/\\/gi, '');
-
-//  console.log(JSON.parse(json).results.pets) ;
-
+  process.stdin.resume();
 })();
