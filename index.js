@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 05:35]
+* Last Modified : [2018-11-21 12:55]
 * Description   :  
 **********************************************************************************/
 
@@ -46,7 +46,7 @@ function sleep(millis) {
   });
 
   try {
-    let bot = await startInstance('pam.r12@gmail.su', 'socks://127.0.0.1:9007');
+    let bot = await startInstance(process.env.EMAIL, process.env.PROXY);
     let wishes = wids(await bot.wishList({ num_items: 100 }));
 
     setInterval(async function() {
@@ -63,7 +63,7 @@ function sleep(millis) {
             let uuid = id + '-' + w;
             if (!db.get(uuid)) {
               db.put(uuid, true);
-              console.log('stored', uuid);
+              console.log('send', uuid);
               let b = bots[Math.floor(Math.random() * bots.length)];
               remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
             }
