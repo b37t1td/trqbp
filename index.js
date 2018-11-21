@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 14:12]
+* Last Modified : [2018-11-21 16:10]
 * Description   :  
 **********************************************************************************/
 
@@ -23,13 +23,40 @@ function wids(data) {
   });
 }
 
-function validate(e) {
-  let pp = BigNumber(e.purchase_price);
+const MTIME = (3600 * 2) * 1000;
 
-  if (e.event_type === 3 && (new Date() - new Date(e.event_date * 1000)) < 420000) {
-    if (pp.isGreaterThan(LP) && pp.isLessThan(BP)) {
-      return e.pet_id;
+async function validate(e, bot) {
+  try {
+    let pp = BigNumber(e.purchase_price);
+
+    if (e.event_type !== 3 ||
+      (new Date() - new Date(e.event_date * 1000)) > 820000 ||
+      !pp.isGreaterThan(LP) ||
+      !pp.isLessThan(BP)) {
+        return;
     }
+
+    let pet =  await bot.petInfo(e.pet_id);
+    pp = BigNumber(pet.price);
+
+    if (pet.lockTime !== 0 ||
+      pet.gender !== 'F' ||
+      pet.displayName.length < 3 ||
+      pet.isValid !== true ||
+      pet.petsPurchased < 3 ||
+      !pp.isGreaterThan(LP) ||
+      !pp.isLessThan(BP)    ||
+      (new Date() - new Date(pet.last_purchase_time * 1000) > MTIME) ||
+      (new Date() - new Date(pet.lastTraded * 1000) > MTIME) ||
+      (new Date() - new Date(pet.lastActiveTime * 1000) > MTIME) ||
+      !pet.purchase_token) {
+      return;
+    }
+
+    return e.pet_id;
+
+  } catch(e) {
+    console.log(e);
   }
 }
 
@@ -56,19 +83,20 @@ function sleep(millis) {
 
     setInterval(async function() {
       wishes = wids(await bot.wishList({ num_items: 100 }));
-    }, 200000);
+    }, 600000);
 
     async function crawl() {
+      let cache = [];
       for (let w of wishes) {
         let e = (await bot.news({ id: w, num_events: 1})).results.events_html[0];
 
         if (e) {
-          let id = validate(e);
-          if (id) {
+          let id = await validate(e, bot);
+          if (id && cache.indexOf(id) === -1) {
+            cache.push(id);
             let uuid = id + '-' + w;
             if (bots[0]) {
               let b = bots[0];
-//              db.put(uuid, true);
               console.log('send', uuid);
               remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
             }
