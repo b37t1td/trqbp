@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 13:19]
+* Last Modified : [2018-11-21 14:12]
 * Description   :  
 **********************************************************************************/
 
@@ -26,7 +26,7 @@ function wids(data) {
 function validate(e) {
   let pp = BigNumber(e.purchase_price);
 
-  if (e.event_type === 3 && (new Date() - new Date(e.event_date * 1000)) < 2420000) {
+  if (e.event_type === 3 && (new Date() - new Date(e.event_date * 1000)) < 420000) {
     if (pp.isGreaterThan(LP) && pp.isLessThan(BP)) {
       return e.pet_id;
     }
@@ -66,9 +66,9 @@ function sleep(millis) {
           let id = validate(e);
           if (id) {
             let uuid = id + '-' + w;
-            if (!db.get(uuid) && bots[0]) {
+            if (bots[0]) {
               let b = bots[0];
-              db.put(uuid, true);
+//              db.put(uuid, true);
               console.log('send', uuid);
               remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
             }
