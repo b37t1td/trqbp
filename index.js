@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 17:21]
+* Last Modified : [2018-11-21 18:49]
 * Description   :  
 **********************************************************************************/
 
@@ -46,7 +46,7 @@ async function validate(e, bot) {
       pet.petsPurchased < 3 ||
       !pp.isGreaterThan(LP) ||
       !pp.isLessThan(BP)    ||
-//      (new Date() - new Date(pet.last_purchase_time * 9000) > MTIME) ||
+      (new Date() - new Date(pet.last_purchase_time * 1000) > MTIME) ||
       (new Date() - new Date(pet.lastTraded * 1000) > MTIME) ||
       (new Date() - new Date(pet.lastActiveTime * 1000) > MTIME) ||
       !pet.purchase_token) {
