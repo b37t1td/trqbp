@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 02:38]
+* Last Modified : [2018-11-21 15:28]
 * Description   :  
 **********************************************************************************/
 
@@ -66,7 +66,11 @@ const Remote = require('./lib/remote');
     if (data.type === 'run-remote') {
       let bot = findBot(data.client);
       if (bot) {
-        bot.run(String(data.id), data.price);
+        try {
+          bot.run(String(data.id), data.price);
+        } catch(e) {
+          console.log(e);
+        }
         remoteSync(bot);
       }
       return;
