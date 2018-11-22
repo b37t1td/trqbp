@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-22 20:27]
+* Last Modified : [2018-11-22 20:43]
 * Description   :  
 **********************************************************************************/
 
@@ -81,17 +81,12 @@ async function logPongs(data) {
       };
 
       try {
-        await Pong.findOneAndUpdate({ bot: p.id, pet: r.id }, pongData).remove();
+        await Pong.findOneAndDelete({ bot: p.id, pet: r.id });
+
+        let pong = new Pong(pongData);
+        await pong.save();
       } catch(e) {
         console.log(e);
-
-        try {
-          let pong = new Pong(pongData);
-          await pong.save();
-
-        } catch(e) {
-          console.log(e);
-        }
       }
     }
   }
