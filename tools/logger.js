@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-22 18:50]
+* Last Modified : [2018-11-22 20:04]
 * Description   :  
 **********************************************************************************/
 
@@ -62,43 +62,33 @@ async function logShare(data) {
   }
 }
 
-let lastPong = 0;
-
 async function logPongs(data) {
-  // Log every N pong
-  if (lastPong >= 3) {
-    try {
-      let date = new Date();
-      for (let p of data) {
-        if (!p.id) continue;
-        for (let r of p.stats.petRuns) {
-          if (!r) continue;
-          await Pong.findOne({ bot: p.id, pet: r.id }).remove();
+  try {
+    let date = new Date();
+    for (let p of data) {
+      if (!p.id) continue;
+      for (let r of p.stats.petRuns) {
+        if (!r) continue;
+        await Pong.findOne({ bot: p.id, pet: r.id }).remove();
 
-          let pong = new Pong({
-            bot: p.id,
-            pet: r.id,
-            fail: r.fail,
-            rice: r.rice,
-            price: r.price,
-            buy: r.buy,
-            n: p.n,
-            created: date
-          });
+        let pong = new Pong({
+          bot: p.id,
+          pet: r.id,
+          fail: r.fail,
+          rice: r.rice,
+          price: r.price,
+          buy: r.buy,
+          n: p.n,
+          created: date
+        });
 
-          await pong.save();
-         }
-      }
-    } catch(e) {
-      console.log(e);
+        await pong.save();
+       }
     }
-    lastPong = 0;
+  } catch(e) {
+    console.log(e);
   }
-
-  lastPong += 1;
 }
-
-let lastEvent = 0;
 
 async function logBotEvents(bot, id) {
   try {
@@ -120,22 +110,21 @@ async function logBotEvents(bot, id) {
 
 async function logEvents(data) {
   try {
-    if (lastEvent >= 30) {
-      let bot = data.bot;
-      let bots = data.bots
+    let bot = data.bot;
+    let bots = data.bots
 
-      for (let b of bots) {
-        await logBotEvents(bot, b.id);
-      }
-
-      lastEvent = 0;
+    for (let b of bots) {
+      await logBotEvents(bot, b.id);
     }
+
   } catch(e) {
     console.log(e);
   }
 
-  lastEvent += 1;
 }
+
+let lastPong = new Date();
+let lastEvent = new Date();
 
 module.exports = async function(scope, data) {
   let db;
@@ -148,13 +137,21 @@ module.exports = async function(scope, data) {
 
   switch(scope) {
     case 'pongs':
-      await logPongs(data);
+      if ((new Date() - lastPong) > Number(process.env.PTIMEOUT)) {
+        lastPong = new Date() + 2000000;
+        await logPongs(data);
+        lastPong = new Date();
+      }
       break;
     case 'share':
       await logShare(data);
       break;
    case 'events':
-      await logEvents(data);
+      if ((new Date() - lastEvent) > Number(process.env.ETIMEOUT)) {
+        lastEvent = new Date() + 2000000;
+        await logEvents(data);
+        lastEvent = new Date();
+      }
       break;
   }
 }
