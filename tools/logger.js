@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-22 18:26]
+* Last Modified : [2018-11-22 18:50]
 * Description   :  
 **********************************************************************************/
 
@@ -120,7 +120,7 @@ async function logBotEvents(bot, id) {
 
 async function logEvents(data) {
   try {
-    if (lastEvent >= 20) {
+    if (lastEvent >= 30) {
       let bot = data.bot;
       let bots = data.bots
 
