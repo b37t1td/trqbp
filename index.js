@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-21 15:28]
+* Last Modified : [2018-11-23 01:34]
 * Description   :  
 **********************************************************************************/
 
@@ -15,6 +15,16 @@ const Remote = require('./lib/remote');
 
 (async function() {
   let bots = [];
+
+  try {
+    for (let idx in EMAILS) {
+      bot = await startInstance(EMAILS[idx], PROXIES[idx]);
+      bot.id = await bot.myId();
+      bots.push(bot);
+    }
+  } catch(e) {
+    console.log(e);
+  }
 
   function findBot(id) {
     return bots.filter((b) => b.id === id)[0];
@@ -67,6 +77,7 @@ const Remote = require('./lib/remote');
       let bot = findBot(data.client);
       if (bot) {
         try {
+          bot.myId();
           bot.run(String(data.id), data.price);
         } catch(e) {
           console.log(e);
@@ -85,16 +96,6 @@ const Remote = require('./lib/remote');
       return;
     }
   });
-
-  try {
-    for (let idx in EMAILS) {
-      bot = await startInstance(EMAILS[idx], PROXIES[idx]);
-      bot.id = await bot.myId();
-      bots.push(bot);
-    }
-  } catch(e) {
-    console.log(e);
-  }
 
   process.stdin.resume();
 })();
