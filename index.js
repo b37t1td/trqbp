@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-22 18:27]
+* Last Modified : [2018-11-22 20:54]
 * Description   :  
 **********************************************************************************/
 
@@ -106,6 +106,10 @@ function sleep(millis) {
         }
 
         bot.news({ id: w, num_events: 6}).then(async function(res) {
+          if (!res || !res.results || !res.results.events_html) {
+            process.exit(-1);
+          }
+
           let events = res.results.events_html;
 
           for (let e of events) {
