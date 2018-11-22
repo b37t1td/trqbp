@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-22 02:17]
+* Last Modified : [2018-11-22 02:19]
 * Description   :  
 **********************************************************************************/
 
@@ -113,7 +113,7 @@ function sleep(millis) {
         });
       }
 
-     await sleep(10000);
+     await sleep(Number(process.env.FDELAY) || 30000);
      crawl();
     }
 
