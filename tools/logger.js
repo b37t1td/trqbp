@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-22 20:10]
+* Last Modified : [2018-11-22 20:27]
 * Description   :  
 **********************************************************************************/
 
@@ -63,30 +63,37 @@ async function logShare(data) {
 }
 
 async function logPongs(data) {
-  try {
-    let date = new Date();
-    for (let p of data) {
-      if (!p.id) continue;
-      for (let r of p.stats.petRuns) {
-        if (!r) continue;
-        await Pong.findOne({ bot: p.id, pet: r.id }).remove();
+  let date = new Date();
+  for (let p of data) {
+    if (!p.id) continue;
+    for (let r of p.stats.petRuns) {
+      if (!r) continue;
 
-        let pong = new Pong({
-          bot: p.id,
-          pet: r.id,
-          fail: r.fail,
-          rice: r.rice,
-          price: r.price,
-          buy: r.buy,
-          n: p.n,
-          created: date
-        });
+      let pongData = {
+        bot: p.id,
+        pet: r.id,
+        fail: r.fail,
+        rice: r.rice,
+        price: r.price,
+        buy: r.buy,
+        n: p.n,
+        created: date
+      };
 
-        await pong.save();
-       }
+      try {
+        await Pong.findOneAndUpdate({ bot: p.id, pet: r.id }, pongData).remove();
+      } catch(e) {
+        console.log(e);
+
+        try {
+          let pong = new Pong(pongData);
+          await pong.save();
+
+        } catch(e) {
+          console.log(e);
+        }
+      }
     }
-  } catch(e) {
-    console.log(e);
   }
 }
 
@@ -98,12 +105,10 @@ async function logBotEvents(bot, id) {
 
     if (lastNews[id] === news[0].event_date) {
       return;
-    } else {
-      lastNews[id] = news[0].event_date;
     }
 
     for (let n of news) {
-      if (n.event_type === 1 || n.event_type === 0 || n.event_type === 3) {
+      if (n.event_date > lastNews[id] || n.event_type === 1 || n.event_type === 0 || n.event_type === 3) {
         if (!await Event.findOne({ id, event_type: n.event_type, event_date: n.event_date })) {
           n.id = id;
           let event = new Event(n);
@@ -111,6 +116,8 @@ async function logBotEvents(bot, id) {
         }
       }
     }
+
+    lastNews[id] = news[0].event_date;
   } catch(e) {
     console.log(e);
   }
