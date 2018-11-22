@@ -107,6 +107,7 @@ function sleep(millis) {
 
         bot.news({ id: w, num_events: 6}).then(async function(res) {
           if (!res || !res.results || !res.results.events_html) {
+            console.log('res is:', res);
             process.exit(-1);
           }
 
