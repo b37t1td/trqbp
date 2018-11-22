@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-22 03:10]
+* Last Modified : [2018-11-22 12:46]
 * Description   :  
 **********************************************************************************/
 
@@ -10,9 +10,10 @@ require('dotenv').config();
 const { startInstance } = require('./lib/poll');
 const Remote = require('./lib/remote');
 const BigNumber = require('bignumber.js');
+const prices = require('./tools/prices');
 
-const LP = BigNumber('9146620701612724868483225687720398878210090213855');
-const BP = BigNumber('9235568581687470146620701612724868483225687720398878210090213855');
+const LP = BigNumber(process.env.LOWPRICE);
+const BP = BigNumber(prices[process.env.MAXPRICE]);
 
 const Storage = require('node-storage');
 const db = new Storage(process.env.DB + '-polls');
@@ -111,10 +112,14 @@ function sleep(millis) {
 
                   if (!db.get(uuid)) {
                     console.log('send', uuid);
-                    remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
+                    remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: process.env.MAXPRICE });
 
                     if (bots[1]) {
-                      remote.send({ type: 'run-remote', client: bots[1].id, id: Number(id), price: '10' });
+                      remote.send({ type: 'run-remote', client: bots[1].id, id: Number(id), price: process.env.MAXPRICE });
+                    }
+
+                    if (bots[2]) {
+                      remote.send({ type: 'run-remote', client: bots[2].id, id: Number(id), price: process.env.MAXPRICE });
                     }
                     db.put(uuid, true);
                   } else {
