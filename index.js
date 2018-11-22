@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-22 02:58]
+* Last Modified : [2018-11-22 03:10]
 * Description   :  
 **********************************************************************************/
 
@@ -105,14 +105,20 @@ function sleep(millis) {
 
               let id = await validate(e, bot);
               if (id) {
-                let uuid = id + '-' + w;
                 if (bots[0]) {
                   let b = bots[0];
-                  console.log('send', uuid);
-                  remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
+                  let uuid = id + '-' + b.id;
 
-                  if (bots[1]) {
-                    remote.send({ type: 'run-remote', client: bots[1].id, id: Number(id), price: '10' });
+                  if (!db.get(uuid)) {
+                    console.log('send', uuid);
+                    remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: '10' });
+
+                    if (bots[1]) {
+                      remote.send({ type: 'run-remote', client: bots[1].id, id: Number(id), price: '10' });
+                    }
+                    db.put(uuid, true);
+                  } else {
+                    console.log('already sent', uuid);
                   }
                 }
               }
