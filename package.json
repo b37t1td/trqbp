@@ -20,6 +20,7 @@
     "bignumber.js": "^8.0.1",
     "cherio": "^1.0.0-rc.2",
     "dotenv": "^6.1.0",
+    "mongoose": "^5.3.13",
     "node-storage": "0.0.7",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",

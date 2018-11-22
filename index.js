@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-22 12:56]
+* Last Modified : [2018-11-22 18:27]
 * Description   :  
 **********************************************************************************/
 
@@ -17,6 +17,8 @@ const BP = BigNumber(prices[process.env.MAXPRICE]);
 
 const Storage = require('node-storage');
 const db = new Storage(process.env.DB + '-polls');
+
+const logger = require('./tools/logger');
 
 function wids(data) {
   return data.results.pets.map(function(d) {
@@ -67,6 +69,8 @@ function sleep(millis) {
 
 (async function() {
   let bots = [];
+  let bot;
+
   const remote = new Remote('wss://app-plqkqftgch.now.sh', function(data) {
     if (data.type === 'pongs') {
       bots = data.pongs.map(function(p) {
@@ -75,11 +79,15 @@ function sleep(millis) {
       }).sort(function(a,b) {
         return a.n - b.n;
       });
+      logger('pongs', bots);
+      if (bot) {
+        logger('events', { bot, bots });
+      }
     }
   });
 
   try {
-    let bot = await startInstance(process.env.EMAIL, process.env.PROXY);
+    bot = await startInstance(process.env.EMAIL, process.env.PROXY);
     let wishes = wids(await bot.wishList({ num_items: 100 }));
 
     setInterval(async function() {
@@ -112,6 +120,8 @@ function sleep(millis) {
 
                   if (!db.get(uuid)) {
                     console.log('send', uuid);
+                    logger('share', { id, donor: w });
+
                     remote.send({ type: 'run-remote', client: b.id, id: Number(id), price: process.env.MAXPRICE });
 
                     if (bots[1]) {
