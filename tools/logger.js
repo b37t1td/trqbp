@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-22 20:43]
+* Last Modified : [2018-11-23 02:43]
 * Description   :  
 **********************************************************************************/
 
@@ -103,7 +103,7 @@ async function logBotEvents(bot, id) {
     }
 
     for (let n of news) {
-      if (n.event_date > lastNews[id] || n.event_type === 1 || n.event_type === 0 || n.event_type === 3) {
+      if (n.event_date > lastNews[id] || n.event_type === 3) {
         if (!await Event.findOne({ id, event_type: n.event_type, event_date: n.event_date })) {
           n.id = id;
           let event = new Event(n);
