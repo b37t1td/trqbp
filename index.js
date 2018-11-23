@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-22 20:54]
+* Last Modified : [2018-11-23 12:55]
 * Description   :  
 **********************************************************************************/
 
@@ -21,7 +21,10 @@ const db = new Storage(process.env.DB + '-polls');
 const logger = require('./tools/logger');
 
 function wids(data) {
-  return data.results.pets.map(function(d) {
+  const cd = Math.floor(new Date().getTime() / 1000);
+  return data.results.pets.filter(function(d) {
+    return (cd - d.lastActiveTime) < 2000;
+  }).map(function(d) {
     return d.userId;
   });
 }
@@ -73,7 +76,9 @@ function sleep(millis) {
 
   const remote = new Remote('wss://app-plqkqftgch.now.sh', function(data) {
     if (data.type === 'pongs') {
-      bots = data.pongs.map(function(p) {
+      bots = data.pongs.filter(function(p) {
+        return p.id > 0;
+      }).map(function(p) {
         p.n = p.stats.petRuns.length;
         return p;
       }).sort(function(a,b) {
