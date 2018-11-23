@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-23 01:39]
+* Last Modified : [2018-11-23 02:49]
 * Description   :  
 **********************************************************************************/
 
@@ -68,7 +68,6 @@ const Remote = require('./lib/remote');
       if (bot) {
         try {
           bot.run(String(data.id), data.price);
-          bot.myId();
         } catch(e) {
           console.log(e);
         }
