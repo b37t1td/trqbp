@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-24 02:16]
+* Last Modified : [2018-11-25 14:20]
 * Description   :  
 **********************************************************************************/
 
@@ -22,11 +22,17 @@ const logger = require('./tools/logger');
 
 function wids(data) {
   const cd = Math.floor(new Date().getTime() / 1000);
-  return data.results.pets.filter(function(d) {
-    return (cd - d.last_purchase_time) < 1000;
-  }).map(function(d) {
-    return d.userId;
-  });
+  try {
+    return data.results.pets.filter(function(d) {
+      return (cd - d.last_purchase_time) < 1000;
+    }).map(function(d) {
+      return d.userId;
+    });
+  } catch(e) {
+    console.log(e);
+  }
+
+  return [];
 }
 
 const MTIME = (3600 * (Number(process.env.MTIME) || 5)) * 1000;
