@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-25 14:20]
+* Last Modified : [2018-11-25 14:22]
 * Description   :  
 **********************************************************************************/
 
@@ -144,9 +144,9 @@ function sleep(millis) {
                       remote.send({ type: 'run-remote', client: bots[1].id, id: Number(id), price: process.env.MAXPRICE });
                     }
 
-                    if (bots[2]) {
-                      remote.send({ type: 'run-remote', client: bots[2].id, id: Number(id), price: process.env.MAXPRICE });
-                    }
+//                    if (bots[2]) {
+//                      remote.send({ type: 'run-remote', client: bots[2].id, id: Number(id), price: process.env.MAXPRICE });
+//                    }
                     db.put(uuid, true);
                   }
                 }
