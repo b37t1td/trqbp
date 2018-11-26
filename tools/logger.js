@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-23 02:43]
+* Last Modified : [2018-11-26 02:39]
 * Description   :  
 **********************************************************************************/
 
@@ -96,7 +96,14 @@ let lastNews = {};
 
 async function logBotEvents(bot, id) {
   try {
-    let news = (await bot.news({ id, num_events: 8 })).results.events_html;
+    let res = (await bot.news({ id, num_events: 20 }));
+
+    if (!res || !res.results || !res.results.events_html) {
+      console.log('loggger news res is:', res);
+      process.exit(-1);
+    }
+
+    let news = res.results.events_html;
 
     if (lastNews[id] === news[0].event_date) {
       return;
