@@ -2,7 +2,7 @@
 * File Name     : tools/logger.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-22 13:43]
-* Last Modified : [2018-11-26 02:39]
+* Last Modified : [2019-01-09 15:22]
 * Description   :  
 **********************************************************************************/
 
@@ -164,11 +164,11 @@ module.exports = async function(scope, data) {
       await logShare(data);
       break;
    case 'events':
-      if ((new Date() - lastEvent) > Number(process.env.ETIMEOUT)) {
-        lastEvent = new Date() + 2000000;
-        await logEvents(data);
-        lastEvent = new Date();
-      }
+//      if ((new Date() - lastEvent) > Number(process.env.ETIMEOUT)) {
+//        lastEvent = new Date() + 2000000;
+//        await logEvents(data);
+//        lastEvent = new Date();
+//      }
       break;
   }
 }

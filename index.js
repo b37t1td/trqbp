@@ -2,7 +2,7 @@
 * File Name     : index.js
 * Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 * Creation Date : [2018-11-20 15:24]
-* Last Modified : [2018-11-25 14:22]
+* Last Modified : [2019-01-09 15:25]
 * Description   :  
 **********************************************************************************/
 
@@ -101,9 +101,9 @@ function sleep(millis) {
     bot = await startInstance(process.env.EMAIL, process.env.PROXY);
     let wishes = wids(await bot.wishList({ num_items: 100 }));
 
-    setInterval(async function() {
-      wishes = wids(await bot.wishList({ num_items: 100 }));
-    }, 600000);
+//    setInterval(async function() {
+//    wishes = wids(await bot.wishList({ num_items: 100 }));
+//    }, 600000);
 
     async function crawl() {
       let cache = [];
@@ -113,10 +113,10 @@ function sleep(millis) {
 
         if (count > 10) {
           count = 0;
-          await sleep(1000);
+          await sleep(2000);
         }
 
-        bot.news({ id: w, num_events: 6}).then(async function(res) {
+        bot.news({ id: w, num_events: 3}).then(async function(res) {
           if (!res || !res.results || !res.results.events_html) {
             console.log('res is:', res);
             process.exit(-1);
