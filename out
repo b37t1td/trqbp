@@ -1,0 +1,607 @@
+Building with -DMG_DISABLE_WS_RANDOM_MASK
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning
+Building with -DMG_ENABLE_ASYNC_RESOLVER
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_BROADCAST
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_CALLBACK_USERDATA
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_COAP
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_DIRECTORY_LISTING
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_DNS
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_DNS_SERVER
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_EXTRA_ERRORS_DESC
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_FAKE_DAVLOCK
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_FILESYSTEM
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_GETADDRINFO
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HEXDUMP
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_CGI
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_SSI
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_SSI_EXEC
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_STREAMING_MULTIPART
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_URL_REWRITES
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_WEBDAV
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_HTTP_WEBSOCKET
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_IPV6
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_MQTT
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_MQTT_BROKER
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_NET_IF_LWIP_LOW_LEVEL
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+mongoose.c:15160: error: expected specifier-qualifier-list before 'err_t'
+mongoose.c:15212:23: error: lwip/init.h: No such file or directory
+mongoose.c:15213:23: error: lwip/pbuf.h: No such file or directory
+mongoose.c:15214:22: error: lwip/tcp.h: No such file or directory
+mongoose.c:15215:24: error: lwip/tcpip.h: No such file or directory
+mongoose.c:15219:27: error: lwip/tcp_impl.h: No such file or directory
+mongoose.c:15221:22: error: lwip/udp.h: No such file or directory
+mongoose.c:15276: warning: 'struct pbuf' declared inside parameter list
+mongoose.c:15276: warning: its scope is only this definition or declaration, which is probably not what you want
+mongoose.c:15296:2: warning: #warning LWIP TCP keepalive is disabled. Please consider enabling it.
+mongoose.c:15299: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'mg_lwip_tcp_conn_cb'
+mongoose.c:15316: error: expected declaration specifiers or '...' before 'err_t'
+mongoose.c: In function 'mg_lwip_tcp_error_cb':
+mongoose.c:15318: error: 'err' undeclared (first use in this function)
+mongoose.c:15318: error: (Each undeclared identifier is reported only once
+mongoose.c:15318: error: for each function it appears in.)
+mongoose.c:15323: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c: At top level:
+mongoose.c:15330: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'mg_lwip_tcp_recv_cb'
+mongoose.c:15384: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'mg_lwip_tcp_sent_cb'
+mongoose.c: In function 'mg_lwip_if_connect_tcp_tcpip':
+mongoose.c:15412: warning: initialization makes pointer from integer without a cast
+mongoose.c:15414: error: 'ip_addr_t' undeclared (first use in this function)
+mongoose.c:15414: error: 'ip' undeclared (first use in this function)
+mongoose.c:15414: error: expected expression before ')' token
+mongoose.c:15415: error: 'u16_t' undeclared (first use in this function)
+mongoose.c:15415: error: expected ';' before 'port'
+mongoose.c:15418: error: 'mg_lwip_tcp_sent_cb' undeclared (first use in this function)
+mongoose.c:15419: error: 'mg_lwip_tcp_recv_cb' undeclared (first use in this function)
+mongoose.c:15420: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15420: error: 'IP_ADDR_ANY' undeclared (first use in this function)
+mongoose.c:15421: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15422: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15422: error: 'ERR_OK' undeclared (first use in this function)
+mongoose.c:15426: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15426: error: 'port' undeclared (first use in this function)
+mongoose.c:15426: error: 'mg_lwip_tcp_conn_cb' undeclared (first use in this function)
+mongoose.c:15427: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15428: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c: At top level:
+mongoose.c:15449: error: expected declaration specifiers or '...' before 'ip_addr_t'
+mongoose.c:15449: error: expected declaration specifiers or '...' before 'u16_t'
+mongoose.c:15449: warning: 'struct pbuf' declared inside parameter list
+mongoose.c: In function 'mg_lwip_udp_recv_cb':
+mongoose.c:15453: error: 'addr' undeclared (first use in this function)
+mongoose.c:15453: error: 'port' undeclared (first use in this function)
+mongoose.c:15453: error: dereferencing pointer to incomplete type
+mongoose.c:15453: error: dereferencing pointer to incomplete type
+mongoose.c:15456: error: 'PBUF_RAW' undeclared (first use in this function)
+mongoose.c:15456: error: 'PBUF_RAM' undeclared (first use in this function)
+mongoose.c:15456: warning: initialization makes pointer from integer without a cast
+mongoose.c:15461: error: dereferencing pointer to incomplete type
+mongoose.c:15469: warning: assignment makes pointer from integer without a cast
+mongoose.c:15472: warning: passing argument 2 of 'mg_lwip_recv_common' from incompatible pointer type
+mongoose.c: At top level:
+mongoose.c:15477: warning: 'struct pbuf' declared inside parameter list
+mongoose.c:15477: error: conflicting types for 'mg_lwip_recv_common'
+mongoose.c:15276: error: previous declaration of 'mg_lwip_recv_common' was here
+mongoose.c: In function 'mg_lwip_recv_common':
+mongoose.c:15479: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15480: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15482: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15484: error: 'struct mg_lwip_conn_state' has no member named 'recv_pending'
+mongoose.c:15485: error: 'struct mg_lwip_conn_state' has no member named 'recv_pending'
+mongoose.c: In function 'mg_lwip_if_udp_recv':
+mongoose.c:15500: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15501: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15502: error: dereferencing pointer to incomplete type
+mongoose.c:15503: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15504: error: dereferencing pointer to incomplete type
+mongoose.c:15504: error: dereferencing pointer to incomplete type
+mongoose.c:15507: error: dereferencing pointer to incomplete type
+mongoose.c:15507: error: dereferencing pointer to incomplete type
+mongoose.c: In function 'mg_lwip_if_connect_udp_tcpip':
+mongoose.c:15517: warning: initialization makes pointer from integer without a cast
+mongoose.c:15518: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15518: error: 'IP_ADDR_ANY' undeclared (first use in this function)
+mongoose.c:15519: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15520: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15520: error: 'ERR_OK' undeclared (first use in this function)
+mongoose.c: In function 'mg_lwip_handle_accept':
+mongoose.c:15542: error: dereferencing pointer to incomplete type
+mongoose.c:15543: error: dereferencing pointer to incomplete type
+mongoose.c: At top level:
+mongoose.c:15547: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'mg_lwip_accept_cb'
+mongoose.c: In function 'mg_lwip_if_listen_tcp_tcpip':
+mongoose.c:15597: warning: initialization makes pointer from integer without a cast
+mongoose.c:15598: error: 'ip_addr_t' undeclared (first use in this function)
+mongoose.c:15598: error: 'ip' undeclared (first use in this function)
+mongoose.c:15598: error: expected expression before ')' token
+mongoose.c:15599: error: 'u16_t' undeclared (first use in this function)
+mongoose.c:15599: error: expected ';' before 'port'
+mongoose.c:15600: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15600: error: 'port' undeclared (first use in this function)
+mongoose.c:15601: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15602: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15602: error: 'ERR_OK' undeclared (first use in this function)
+mongoose.c:15608: warning: assignment makes pointer from integer without a cast
+mongoose.c:15610: error: 'mg_lwip_accept_cb' undeclared (first use in this function)
+mongoose.c: In function 'mg_lwip_if_listen_udp_tcpip':
+mongoose.c:15625: warning: initialization makes pointer from integer without a cast
+mongoose.c:15626: error: 'ip_addr_t' undeclared (first use in this function)
+mongoose.c:15626: error: 'ip' undeclared (first use in this function)
+mongoose.c:15626: error: expected expression before ')' token
+mongoose.c:15627: error: 'u16_t' undeclared (first use in this function)
+mongoose.c:15627: error: expected ';' before 'port'
+mongoose.c:15628: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15628: error: 'port' undeclared (first use in this function)
+mongoose.c:15629: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15630: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15630: error: 'ERR_OK' undeclared (first use in this function)
+mongoose.c: In function 'mg_lwip_tcp_write_tcpip':
+mongoose.c:15662: error: dereferencing pointer to incomplete type
+mongoose.c:15662: error: dereferencing pointer to incomplete type
+mongoose.c:15662: error: dereferencing pointer to incomplete type
+mongoose.c:15662: error: dereferencing pointer to incomplete type
+mongoose.c:15662: error: dereferencing pointer to incomplete type
+mongoose.c:15662: error: dereferencing pointer to incomplete type
+mongoose.c:15665: error: dereferencing pointer to incomplete type
+mongoose.c:15665: error: dereferencing pointer to incomplete type
+mongoose.c:15665: error: dereferencing pointer to incomplete type
+mongoose.c:15665: error: dereferencing pointer to incomplete type
+mongoose.c:15671: error: dereferencing pointer to incomplete type
+mongoose.c:15671: error: dereferencing pointer to incomplete type
+mongoose.c:15672: error: dereferencing pointer to incomplete type
+mongoose.c:15672: error: dereferencing pointer to incomplete type
+mongoose.c:15686: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15686: error: 'TCP_WRITE_FLAG_COPY' undeclared (first use in this function)
+mongoose.c:15687: error: dereferencing pointer to incomplete type
+mongoose.c:15687: error: dereferencing pointer to incomplete type
+mongoose.c:15688: error: dereferencing pointer to incomplete type
+mongoose.c:15688: error: dereferencing pointer to incomplete type
+mongoose.c:15689: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15690: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15690: error: 'ERR_OK' undeclared (first use in this function)
+mongoose.c:15695: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15695: error: 'ERR_MEM' undeclared (first use in this function)
+mongoose.c: In function 'mg_lwip_if_tcp_send':
+mongoose.c:15709: error: dereferencing pointer to incomplete type
+mongoose.c: At top level:
+mongoose.c:15717: error: expected specifier-qualifier-list before 'ip_addr_t'
+mongoose.c: In function 'udp_sendto_tcpip':
+mongoose.c:15724: error: 'struct udp_sendto_ctx' has no member named 'ret'
+mongoose.c:15724: error: 'struct udp_sendto_ctx' has no member named 'ip'
+mongoose.c:15724: error: 'struct udp_sendto_ctx' has no member named 'port'
+mongoose.c: In function 'mg_lwip_if_udp_send':
+mongoose.c:15732: error: 'PBUF_TRANSPORT' undeclared (first use in this function)
+mongoose.c:15732: error: 'PBUF_RAM' undeclared (first use in this function)
+mongoose.c:15732: warning: initialization makes pointer from integer without a cast
+mongoose.c:15736: error: 'ip_addr_t' undeclared (first use in this function)
+mongoose.c:15736: error: expected ';' before 'ip'
+mongoose.c:15738: error: 'u16_t' undeclared (first use in this function)
+mongoose.c:15738: error: expected ';' before 'port'
+mongoose.c:15740: error: dereferencing pointer to incomplete type
+mongoose.c:15741: error: unknown field 'ip' specified in initializer
+mongoose.c:15741: error: 'ip' undeclared (first use in this function)
+mongoose.c:15741: warning: excess elements in struct initializer
+mongoose.c:15741: warning: (near initialization for 'ctx')
+mongoose.c:15741: error: unknown field 'port' specified in initializer
+mongoose.c:15741: error: 'port' undeclared (first use in this function)
+mongoose.c:15741: warning: excess elements in struct initializer
+mongoose.c:15741: warning: (near initialization for 'ctx')
+mongoose.c:15743: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15743: error: 'struct udp_sendto_ctx' has no member named 'ret'
+mongoose.c:15745: error: 'struct mg_lwip_conn_state' has no member named 'err'
+mongoose.c:15745: error: 'ERR_OK' undeclared (first use in this function)
+mongoose.c: In function 'mg_lwip_if_can_send':
+mongoose.c:15757: error: dereferencing pointer to incomplete type
+mongoose.c: In function 'mg_lwip_if_tcp_recv':
+mongoose.c:15784: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15785: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15786: error: dereferencing pointer to incomplete type
+mongoose.c:15786: error: 'struct mg_lwip_conn_state' has no member named 'rx_offset'
+mongoose.c:15789: error: 'struct mg_lwip_conn_state' has no member named 'rx_offset'
+mongoose.c:15793: error: 'struct mg_lwip_conn_state' has no member named 'rx_offset'
+mongoose.c:15794: error: 'struct mg_lwip_conn_state' has no member named 'rx_offset'
+mongoose.c:15794: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15795: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15795: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15797: error: 'struct mg_lwip_conn_state' has no member named 'rx_offset'
+mongoose.c: In function 'mg_lwip_if_destroy_conn':
+mongoose.c:15832: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15833: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15834: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c:15834: error: 'struct mg_lwip_conn_state' has no member named 'rx_chain'
+mongoose.c: In function 'mg_lwip_if_get_conn_addr':
+mongoose.c:15862: error: dereferencing pointer to incomplete type
+mongoose.c:15863: error: dereferencing pointer to incomplete type
+mongoose.c:15870: error: dereferencing pointer to incomplete type
+mongoose.c:15871: error: dereferencing pointer to incomplete type
+Building with -DMG_ENABLE_NET_IF_PIC32
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+mongoose.c: In function 'mg_pic32_if_destroy_conn':
+mongoose.c:16264: error: 'TCP_SOCKET' undeclared (first use in this function)
+mongoose.c:16264: error: (Each undeclared identifier is reported only once
+mongoose.c:16264: error: for each function it appears in.)
+mongoose.c:16264: error: expected ')' before 'nc'
+mongoose.c:16267: error: 'UDP_SOCKET' undeclared (first use in this function)
+mongoose.c:16267: error: expected ')' before 'nc'
+mongoose.c: In function 'mg_pic32_if_listen_udp':
+mongoose.c:16275: error: 'IP_ADDRESS_TYPE_IPV4' undeclared (first use in this function)
+mongoose.c:16276: error: 'IP_ADDRESS_TYPE_IPV6' undeclared (first use in this function)
+mongoose.c:16278: error: 'IP_MULTI_ADDRESS' undeclared (first use in this function)
+mongoose.c:16278: error: expected expression before ')' token
+mongoose.c: In function 'mg_pic32_if_listen_tcp':
+mongoose.c:16297: error: 'IP_ADDRESS_TYPE_IPV4' undeclared (first use in this function)
+mongoose.c:16298: error: 'IP_ADDRESS_TYPE_IPV6' undeclared (first use in this function)
+mongoose.c:16300: error: 'IP_MULTI_ADDRESS' undeclared (first use in this function)
+mongoose.c:16300: error: expected expression before ')' token
+mongoose.c: At top level:
+mongoose.c:16308: error: redefinition of 'mg_accept_conn'
+mongoose.c:3963: error: previous definition of 'mg_accept_conn' was here
+mongoose.c: In function 'mg_accept_conn':
+mongoose.c:16310: error: 'TCP_SOCKET_INFO' undeclared (first use in this function)
+mongoose.c:16310: error: expected ';' before 'si'
+mongoose.c:16322: error: 'TCP_SOCKET' undeclared (first use in this function)
+mongoose.c:16322: error: expected ')' before 'nc'
+mongoose.c:16326: error: 'si' undeclared (first use in this function)
+mongoose.c:16326: error: 'IP_ADDRESS_TYPE_IPV4' undeclared (first use in this function)
+mongoose.c: In function 'inet_ntoa':
+mongoose.c:16342: error: 'struct in_addr' has no member named 'S_un'
+mongoose.c:16343: error: 'struct in_addr' has no member named 'S_un'
+mongoose.c:16343: error: 'struct in_addr' has no member named 'S_un'
+mongoose.c:16344: error: 'struct in_addr' has no member named 'S_un'
+mongoose.c: In function 'mg_handle_send':
+mongoose.c:16352: error: 'UDP_SOCKET' undeclared (first use in this function)
+mongoose.c:16352: error: expected ')' before 'nc'
+mongoose.c:16359: error: expected ')' before 'nc'
+mongoose.c:16361: error: expected ')' before 'nc'
+mongoose.c:16369: error: 'TCP_SOCKET' undeclared (first use in this function)
+mongoose.c:16369: error: expected ')' before 'nc'
+mongoose.c:16374: error: expected ')' before 'nc'
+mongoose.c: In function 'mg_handle_recv':
+mongoose.c:16390: error: 'UDP_SOCKET' undeclared (first use in this function)
+mongoose.c:16390: error: expected ')' before 'nc'
+mongoose.c:16395: error: expected ')' before 'nc'
+mongoose.c:16403: error: 'TCP_SOCKET' undeclared (first use in this function)
+mongoose.c:16403: error: expected ')' before 'nc'
+mongoose.c:16410: error: expected ')' before 'nc'
+mongoose.c: In function 'mg_pic32_if_poll':
+mongoose.c:16435: error: 'TCP_SOCKET' undeclared (first use in this function)
+mongoose.c:16435: error: expected ')' before 'nc'
+mongoose.c:16439: error: expected ')' before 'nc'
+mongoose.c: In function 'mg_pic32_if_connect_tcp':
+mongoose.c:16478: error: 'IP_ADDRESS_TYPE_IPV4' undeclared (first use in this function)
+mongoose.c:16479: error: 'IP_ADDRESS_TYPE_IPV6' undeclared (first use in this function)
+mongoose.c:16480: error: 'IP_MULTI_ADDRESS' undeclared (first use in this function)
+mongoose.c:16480: error: expected expression before ')' token
+mongoose.c: In function 'mg_pic32_if_connect_udp':
+mongoose.c:16485: error: 'IP_ADDRESS_TYPE_ANY' undeclared (first use in this function)
+mongoose.c: At top level:
+mongoose.c:16511: warning: initialization from incompatible pointer type
+mongoose.c:16511: warning: initialization from incompatible pointer type
+mongoose.c:16511: warning: initialization from incompatible pointer type
+mongoose.c:16511: warning: initialization from incompatible pointer type
+mongoose.c:16511: warning: initialization from incompatible pointer type
+mongoose.c:16511: warning: initialization from incompatible pointer type
+mongoose.c:16511: warning: initialization from incompatible pointer type
+Building with -DMG_ENABLE_NET_IF_SIMPLELINK
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+mongoose.c:14463: error: conflicting types for 'mg_open_listening_socket'
+mongoose.c:3989: error: previous definition of 'mg_open_listening_socket' was here
+mongoose.c:14465: error: redefinition of 'mg_set_non_blocking_mode'
+mongoose.c:3836: error: previous definition of 'mg_set_non_blocking_mode' was here
+mongoose.c: In function 'mg_set_non_blocking_mode':
+mongoose.c:14466: error: 'SlSockNonblocking_t' undeclared (first use in this function)
+mongoose.c:14466: error: (Each undeclared identifier is reported only once
+mongoose.c:14466: error: for each function it appears in.)
+mongoose.c:14466: error: expected ';' before 'opt'
+mongoose.c:14468: error: 'opt' undeclared (first use in this function)
+mongoose.c:14472: error: 'SL_SOL_SOCKET' undeclared (first use in this function)
+mongoose.c:14472: error: 'SL_SO_NONBLOCKING' undeclared (first use in this function)
+mongoose.c: At top level:
+mongoose.c:14475: error: conflicting types for 'mg_is_error'
+mongoose.c:3846: error: previous definition of 'mg_is_error' was here
+mongoose.c: In function 'mg_is_error':
+mongoose.c:14476: error: 'SL_ERROR_BSD_EALREADY' undeclared (first use in this function)
+mongoose.c:14476: error: 'SL_ERROR_BSD_EAGAIN' undeclared (first use in this function)
+mongoose.c: In function 'mg_sl_if_listen_tcp':
+mongoose.c:14514: error: 'SL_SEC_SOCKET' undeclared (first use in this function)
+mongoose.c: In function 'mg_sl_if_udp_recv':
+mongoose.c:14556: error: 'SlSocklen_t' undeclared (first use in this function)
+mongoose.c:14556: error: expected ';' before 'sa_len_t'
+mongoose.c:14558: error: 'SlSockAddr_t' undeclared (first use in this function)
+mongoose.c:14558: error: expected expression before ')' token
+mongoose.c:14559: error: 'sa_len_t' undeclared (first use in this function)
+mongoose.c: At top level:
+mongoose.c:14578: error: redefinition of 'mg_accept_conn'
+mongoose.c:3963: error: previous definition of 'mg_accept_conn' was here
+mongoose.c:14628: error: redefinition of 'mg_mgr_handle_conn'
+mongoose.c:4038: error: previous definition of 'mg_mgr_handle_conn' was here
+mongoose.c: In function 'mg_mgr_handle_conn':
+mongoose.c:14635: error: 'SL_ERROR_BSD_EALREADY' undeclared (first use in this function)
+mongoose.c:14644: error: 'SL_ERROR_BSD_ESECSNOVERIFY' undeclared (first use in this function)
+mongoose.c:14646: error: 'SL_ERROR_BSD_ESECDATEERROR' undeclared (first use in this function)
+mongoose.c: In function 'mg_sl_if_poll':
+mongoose.c:14713: error: storage size of 'tv' isn't known
+mongoose.c:14714: error: 'SlFdSet_t' undeclared (first use in this function)
+mongoose.c:14714: error: expected ';' before 'read_set'
+mongoose.c:14718: error: 'read_set' undeclared (first use in this function)
+mongoose.c:14719: error: 'write_set' undeclared (first use in this function)
+mongoose.c:14720: error: 'err_set' undeclared (first use in this function)
+Building with -DMG_ENABLE_NET_IF_SOCKET
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_SNTP
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+mongoose.c: In function 'mg_get_sec':
+mongoose.c:12883: warning: integer constant is too large for 'long' type
+mongoose.c: In function 'mg_ntp_to_tv':
+mongoose.c:12896: warning: this decimal constant is unsigned only in ISO C90
+mongoose.c: In function 'mg_sntp_send_request':
+mongoose.c:12942: warning: this decimal constant is unsigned only in ISO C90
+mongoose.c: In function 'mg_calculate_delay':
+mongoose.c:12952: warning: this decimal constant is unsigned only in ISO C90
+Building with -DMG_ENABLE_SOCKS
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_SSL
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+mongoose.c:4658:25: error: openssl/ssl.h: No such file or directory
+mongoose.c:4660:26: error: openssl/tls1.h: No such file or directory
+mongoose.c:4664: error: expected specifier-qualifier-list before 'SSL'
+mongoose.c: In function 'mg_ssl_if_conn_accept':
+mongoose.c:4681: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4681: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4682: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4682: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c: At top level:
+mongoose.c:4688: error: expected ')' before '*' token
+mongoose.c:4690: error: expected ')' before '*' token
+mongoose.c:4691: error: expected ')' before '*' token
+mongoose.c: In function 'mg_ssl_if_conn_init':
+mongoose.c:4710: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4712: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4714: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4721: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4721: error: 'SSL_OP_NO_SSLv2' undeclared (first use in this function)
+mongoose.c:4721: error: (Each undeclared identifier is reported only once
+mongoose.c:4721: error: for each function it appears in.)
+mongoose.c:4722: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4722: error: 'SSL_OP_NO_SSLv3' undeclared (first use in this function)
+mongoose.c:4723: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4723: error: 'SSL_OP_NO_TLSv1' undeclared (first use in this function)
+mongoose.c:4735: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4741: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4746: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4751: error: 'struct mg_ssl_if_ctx' has no member named 'psk'
+mongoose.c:4759: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4759: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4768: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c: In function 'mg_ssl_if_ssl_err':
+mongoose.c:4780: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4781: error: 'SSL_ERROR_WANT_READ' undeclared (first use in this function)
+mongoose.c:4782: error: 'SSL_ERROR_WANT_WRITE' undeclared (first use in this function)
+mongoose.c:4783: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c: In function 'mg_ssl_if_handshake':
+mongoose.c:4793: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4794: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4796: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4796: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c: In function 'mg_ssl_if_read':
+mongoose.c:4803: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c: In function 'mg_ssl_if_write':
+mongoose.c:4812: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c: In function 'mg_ssl_if_conn_close_notify':
+mongoose.c:4821: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c: In function 'mg_ssl_if_conn_free':
+mongoose.c:4828: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4828: error: 'struct mg_ssl_if_ctx' has no member named 'ssl'
+mongoose.c:4829: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4829: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:4830: error: 'struct mg_ssl_if_ctx' has no member named 'psk'
+mongoose.c: At top level:
+mongoose.c:4895: error: expected ')' before '*' token
+mongoose.c:4904: error: expected ')' before '*' token
+mongoose.c:4953: error: expected ')' before '*' token
+mongoose.c:4960: error: expected ')' before '*' token
+mongoose.c: In function 'mg_ssl_if_ossl_set_psk':
+mongoose.c:5011: error: 'struct mg_ssl_if_ctx' has no member named 'identity_len'
+mongoose.c:5012: error: 'struct mg_ssl_if_ctx' has no member named 'psk'
+mongoose.c:5012: error: 'struct mg_ssl_if_ctx' has no member named 'identity_len'
+mongoose.c:5013: error: 'struct mg_ssl_if_ctx' has no member named 'psk'
+mongoose.c:5014: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+mongoose.c:5014: error: 'mg_ssl_if_ossl_psk_cb' undeclared (first use in this function)
+mongoose.c:5015: error: 'struct mg_ssl_if_ctx' has no member named 'ssl_ctx'
+Building with -DMG_ENABLE_SYNC_RESOLVER
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_ENABLE_THREADS
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_LWIP
+In file included from mongoose.c:1:
+mongoose.h:2005:22: error: lwip/opt.h: No such file or directory
+mongoose.h:2006:22: error: lwip/err.h: No such file or directory
+mongoose.h:2007:26: error: lwip/ip_addr.h: No such file or directory
+mongoose.h:2008:23: error: lwip/inet.h: No such file or directory
+mongoose.h:2009:24: error: lwip/netdb.h: No such file or directory
+mongoose.h:2010:22: error: lwip/dns.h: No such file or directory
+mongoose.h:2022:26: error: lwip/sockets.h: No such file or directory
+mongoose.h:2028:1: warning: "SOMAXCONN" redefined
+In file included from /home/sveta/Soft/cross-compiler-mips/bin/../include/sys/socket.h:35,
+                 from /home/sveta/Soft/cross-compiler-mips/bin/../include/netinet/in.h:25,
+                 from /home/sveta/Soft/cross-compiler-mips/bin/../include/arpa/inet.h:23,
+                 from mongoose.h:386,
+                 from mongoose.c:1:
+/home/sveta/Soft/cross-compiler-mips/bin/../include/bits/socket.h:140:1: warning: this is the location of the previous definition
+In file included from mongoose.c:1:
+mongoose.h:2029: error: redefinition of typedef 'sock_t'
+mongoose.h:434: error: previous declaration of 'sock_t' was here
+Building with -DMG_NET_IF
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_SSL_IF_MBEDTLS_MAX_FRAG_LEN
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
+Building with -DMG_TI_NO_HOST_INTERFACE
+mongoose.c:1558: warning: weak declaration of 'mbuf_resize' after first use results in unspecified behavior
+mongoose.c:1693: warning: weak declaration of 'mg_mk_str' after first use results in unspecified behavior
+mongoose.c:1821: warning: weak declaration of 'mg_str_starts_with' after first use results in unspecified behavior
+mongoose.c:2212: warning: weak declaration of 'mg_avprintf' after first use results in unspecified behavior
+mongoose.c:2270: warning: weak declaration of 'mg_next_comma_list_entry_n' after first use results in unspecified behavior
